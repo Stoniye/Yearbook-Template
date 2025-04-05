@@ -16,9 +16,6 @@ document.getElementById('personCloseButton').addEventListener('click', closePers
 function showPage(pageId) {
     document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
     document.getElementById(pageId + 'Page').style.display = 'block';
-
-    if (pageId === 'gallery') loadPictures();
-    if(pageId === 'book') loadPeople('student');
 }
 
 async function loadPeople(type) {
@@ -225,7 +222,14 @@ function closePerson() {
 
 function onLoad() {
     showPage('book');
+    loadPeople('student')
     loadLanguage();
+    waitForPictures();
+}
+
+async function waitForPictures(){
+    await pictureData;
+    loadPictures();
 }
 
 async function loadLanguage() {

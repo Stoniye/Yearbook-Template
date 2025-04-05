@@ -218,6 +218,13 @@ body {
 }
 
 @media (max-width: 540px) {
+    .person-info{
+        position: absolute;
+        left: 220px;
+        max-width: 300px;
+        top: 60px;
+    }
+
     .person-image-open {
         border-radius: 13px;
         width: 200px;
@@ -241,6 +248,13 @@ body {
         position: static;
         text-align: center;
         margin-top: 40px;
+    }
+
+    .person-comments{
+        white-space: wrap;
+        font-size: 20px;
+        margin-top: 20px;
+        color: #7a7a7a;
     }
 
     .person-description{
