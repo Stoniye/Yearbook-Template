@@ -160,7 +160,7 @@ async function loadPictures() {
         const picDiv = document.createElement('div');
         picDiv.className = 'gallery-item';
 
-        if (pic.image.includes(".mp4")){
+        if (pic.image.includes(".mp4") || pic.image.includes(".mov") || pic.image.includes(".MOV")){
             picDiv.innerHTML = `<div style="position: relative; display: inline-block;">
                   <video src="${pic.image}" alt="Video" data-data='${JSON.stringify(pic)}' style="width: 100%; height: auto;"></video>
                   <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -185,7 +185,7 @@ function openImage(data) {
     const path = data.image;
     container.innerHTML = '<button class="close-button" aria-label="Close image" id="imageCloseButton"></button>';
 
-    if (path.includes(".mp4")) {
+    if (path.includes(".mp4") || path.includes(".mov") || path.includes(".MOV")) {
         container.innerHTML += '<video controls class="gallery-item-video-open">\n' +
             `<source src="${path}" type="video/mp4" id="galleryItemVideoOpen"> Your browser does not support the video tag.\n` +
             '</video>';

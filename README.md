@@ -15,11 +15,11 @@ Here is a step-by-step tutorial on how to create your own page using my template
 
 ---
 
-## How customize the Website  
+## How to customize the Website  
 
 - Upload all pictures to the `image/pictures` folder. (supported: .png, .jpeg, .jpg)
 - Upload student pictures to the `image/student` folder. (supported: .png, .jpeg, .jpg)
-- Upload teacher pictures to the `image/teacher` folder. (supported: .png, .jpeg, .jpg, .mp4)
+- Upload teacher pictures to the `image/teacher` folder. (supported: .png, .jpeg, .jpg, .mp4, .mov, .MOV)
 
 Next, navigate to the `json` folder. Inside, you'll find two files: `peopleData.json` and `pictureData.json`. 
 These files allow you to add students, teachers, and pictures. I have included some examples to show you how the system works.
