@@ -210,11 +210,24 @@ body {
 }
 
 .person-description{
-    position: absolute;
-    top: 350px;
+    position: static;
+    margin-top: 70px;
     width: 60vw;
+    margin-bottom: 60px;
     white-space: pre-line;
     font-size: 20px;
+}
+
+.next-button {
+    position: absolute;
+    top: 290px;
+    left: 160px;
+    width: 40px;
+    height: 40px;
+    background-color: #3A3A3A;
+    white-space: wrap;
+    font-size: 20px;
+    border-radius: 13%;
 }
 
 @media (max-width: 540px) {
@@ -264,18 +277,19 @@ body {
         margin-bottom: 60px;
         white-space: pre-line;
     }
-}
 
-.next-button {
-    position: absolute;
-    top: 290px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    background-color: #3A3A3A;
-    white-space: wrap;
-    font-size: 20px;
-    border-radius: 13%;
+    .next-button {
+        position: absolute;
+        top: 290px;
+        left: unset;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        background-color: #3A3A3A;
+        white-space: wrap;
+        font-size: 20px;
+        border-radius: 13%;
+    }
 }
 
 .previous-button {
