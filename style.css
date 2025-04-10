@@ -213,7 +213,7 @@ body {
     position: absolute;
     top: 350px;
     width: 60vw;
-    white-space: wrap;
+    white-space: pre-line;
     font-size: 20px;
 }
 
@@ -262,6 +262,7 @@ body {
         text-align: center;
         margin-top: 55px;
         margin-bottom: 60px;
+        white-space: pre-line;
     }
 }
 
