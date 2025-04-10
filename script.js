@@ -71,8 +71,14 @@ async function handlePersonClick(person) {
     }
     document.getElementById('personInfo').innerHTML += `<div id="personComments" class="person-comments">${person.comments[Math.floor(Math.random() * Object.keys(person.comments).length)]}</div>`;
 
-    document.getElementById('nextButton').addEventListener('click', () => {changePicture("next", person)});
-    document.getElementById('previousButton').addEventListener('click', () => {changePicture("previous", person)});
+    if (Object.keys(person.image).length > 1){
+        const personContainer = document.getElementById('personContainer');
+        personContainer.innerHTML += `<div id="nextButton" class="next-button" data-type="next"></div>
+        <div id="previousButton" class="previous-button" data-type="previous"></div>`;
+
+        document.getElementById('nextButton').addEventListener('click', () => {changePicture("next", person)});
+        document.getElementById('previousButton').addEventListener('click', () => {changePicture("previous", person)});
+    }
 
     const comments = person.comments;
     const commentsLength = Object.keys(comments).length
@@ -209,13 +215,8 @@ function closeImage() {
 function closePerson() {
     document.getElementById('personItemPage').style.display = 'none';
 
-    let myDiv = document.getElementById("nextButton");
-    let newDiv = myDiv.cloneNode(false);
-    myDiv.parentNode.replaceChild(newDiv, myDiv);
-
-    myDiv = document.getElementById("previousButton");
-    newDiv = myDiv.cloneNode(false);
-    myDiv.parentNode.replaceChild(newDiv, myDiv);
+    document.getElementById("nextButton").remove();
+    document.getElementById("previousButton").remove();
 
     clearInterval(intervalId);
 }
