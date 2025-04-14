@@ -203,7 +203,7 @@ body {
 }
 
 .person-comments{
-    white-space: nowrap;
+    white-space: wrap;
     font-size: 20px;
     margin-top: 20px;
     color: #7a7a7a;
@@ -232,23 +232,16 @@ body {
 
 @media (max-width: 540px) {
     .person-info{
-        position: absolute;
-        left: 220px;
         max-width: 300px;
-        top: 60px;
     }
 
     .person-image-open {
-        border-radius: 13px;
-        width: 200px;
         display: block;
         margin: 0 auto;
     }
 
     .person-container {
-        position: absolute;
-        top: 20%;
-        left: 20%;
+        right: 20%;
     }
 
     .person-name {
@@ -263,32 +256,36 @@ body {
         margin-top: 40px;
     }
 
-    .person-comments{
-        white-space: wrap;
-        font-size: 20px;
-        margin-top: 20px;
-        color: #7a7a7a;
-    }
-
     .person-description{
-        position: static;
         text-align: center;
         margin-top: 55px;
-        margin-bottom: 60px;
-        white-space: pre-line;
     }
 
     .next-button {
-        position: absolute;
-        top: 290px;
         left: unset;
         right: 0;
-        width: 40px;
-        height: 40px;
-        background-color: #3A3A3A;
-        white-space: wrap;
+    }
+}
+
+@media (max-width: 375px) {
+    .person-name {
         font-size: 20px;
-        border-radius: 13%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 335px) {
+    .person-name {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .next-button {
+        left: 155px;
+    }
+
+    .person-image-open {
+        width: 195px;
     }
 }
 
