@@ -88,6 +88,8 @@ async function handlePersonClick(person) {
             document.getElementById('personComments').textContent = comments[Math.floor(Math.random() * Object.keys(comments).length)];
         }
     }, 5000);
+    
+    document.getElementById('personItemPage').scrollTop = 0;
 }
 
 function calculateAge(birthdayString) {
