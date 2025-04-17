@@ -84,8 +84,26 @@ async function handlePersonClick(person) {
     const commentsLength = Object.keys(comments).length
 
     intervalId = setInterval(() => {
+        let activeIndex = 0;
+        const activeText = document.getElementById('personComments').textContent;
+
+        for (let i = 0; i < commentsLength; i++) {
+            if(comments[i] === activeText){
+                activeIndex = i;
+                break;
+            }
+        }
+
+        let newIndex = activeIndex + 1;
+
+        if (newIndex >= commentsLength) {
+            newIndex = 0;
+        }
+
+        console.log(newIndex);
+
         if (comments && commentsLength > 0) {
-            document.getElementById('personComments').textContent = comments[Math.floor(Math.random() * Object.keys(comments).length)];
+            document.getElementById('personComments').textContent = comments[newIndex];
         }
     }, 5000);
     
