@@ -101,8 +101,6 @@ async function handlePersonClick(person) {
             newIndex = 0;
         }
 
-        console.log(newIndex);
-
         if (comments && commentsLength > 0) {
             document.getElementById('personComments').textContent = comments[newIndex];
         }
