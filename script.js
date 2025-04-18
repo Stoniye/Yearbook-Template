@@ -22,6 +22,7 @@ async function loadPeople(type) {
     const data = await peopleData;
     const container = document.querySelector('#bookPage .people-container');
     container.innerHTML = '';
+    document.getElementById('peopleContainer').scrollTop = 0;
 
     const people = type === 'teacher' ? data.teachers : data.students;
     people.forEach(person => {
