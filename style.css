@@ -209,6 +209,9 @@ body {
     color: #7a7a7a;
 }
 
+.person-comments-container{
+}
+
 .person-description{
     position: static;
     margin-top: 70px;
@@ -264,6 +267,10 @@ body {
     .next-button {
         left: unset;
         right: 0;
+    }
+
+    .person-comments-container{
+        min-height: 110px;
     }
 }
 

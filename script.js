@@ -70,7 +70,7 @@ async function handlePersonClick(person) {
             <div id="personKnowledge" class="person-attribute">${languageDataLoaded.knowledge}: ${person.rating.knowledge}</div>
         `;
     }
-    document.getElementById('personInfo').innerHTML += `<div id="personComments" class="person-comments">${person.comments[Math.floor(Math.random() * Object.keys(person.comments).length)]}</div>`;
+    document.getElementById('personInfo').innerHTML += `<div class="person-comments-container"> <div id="personComments" class="person-comments">${person.comments[Math.floor(Math.random() * Object.keys(person.comments).length)]}</div> </div>`;
 
     if (Object.keys(person.image).length > 1){
         const personContainer = document.getElementById('personContainer');
@@ -232,12 +232,18 @@ function closeImage() {
 }
 
 function closePerson() {
+    if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+
     document.getElementById('personItemPage').style.display = 'none';
 
-    document.getElementById("nextButton").remove();
-    document.getElementById("previousButton").remove();
+    const nextBtn = document.getElementById("nextButton");
+    if (nextBtn) nextBtn.remove();
 
-    clearInterval(intervalId);
+    const prevBtn = document.getElementById("previousButton");
+    if (prevBtn) prevBtn.remove();
 }
 
 function onLoad() {
