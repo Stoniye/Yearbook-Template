@@ -3,14 +3,15 @@
 Here is a step-by-step tutorial on how to create your own page using my template:  
 
 1. Navigate to the [Template](https://github.com/Stoniye/Yearbook-Template) site.  
-2. Click on the "Fork" button.  
-3. In the "Repository name" field, enter your class name.  
-4. Click on "Create Fork."  
-5. Now, navigate to the Repository Settings of your new repository.  
-6. Click on "Pages."  
-7. Under "Branch," select the `main` branch and the `/ (root)` folder.  
-8. Click on "Save."  
-9. Your page is in a few minutes online at:  
+2. Click on the "Use this template" button.
+3. Click on the "Create new repository" button.
+4. In the "Repository name" field, enter your class name.  
+5. Click on "Create Fork."  
+6. Now, navigate to the Repository Settings of your new repository.  
+7. Click on "Pages."  
+8. Under "Branch," select the `main` branch and the `/ (root)` folder.  
+9. Click on "Save."  
+10. Your page is in a few minutes online at:  
    **https://{GitHub Username}.github.io/{Class Name}**  
 
 ---
